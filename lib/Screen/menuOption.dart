@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'suma.dart';
 import 'calculadora.dart';
+import 'registroUsuarios.dart';
 
 class menuOptions extends StatefulWidget {
   const menuOptions({super.key});
@@ -64,7 +65,12 @@ class _menuOptionsState extends State<menuOptions> {
               title: Text('registro'),
               leading: Icon(Icons.add),
               trailing: Icon(Icons.arrow_circle_right_rounded),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => registroUsuario()),
+                );
+              },
             ),
           ),
           SizedBox(height: 12),
